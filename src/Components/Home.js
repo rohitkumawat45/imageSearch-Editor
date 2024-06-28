@@ -1,18 +1,14 @@
 import axios from "axios";
-import React, { useEffect, useState } from "react";
+import React, {useState } from "react";
 import { FaSearch } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
-import Pagnition from "./Pagnition";
 const Home = () => {
   const navigation = useNavigate();
   const [search, setSearch] = useState("");
   const [serachData, setSearchData] = useState([]);
   const [currentPage, setCurrentPage] = useState("1");
   const [total, setTotal] = useState("");
-  // console.log("search",search)
-//   useEffect(() => {
-//     searchData();
-//   }, [search, currentPage]);
+  
   const searchData = () => {
     let apiUrl =
       "https://pixabay.com/api/?key=44575134-5341e3f59c4da493e0c1b23e4&q=" +
@@ -33,15 +29,16 @@ const Home = () => {
   return (
     <>
       <div className="container">
-        <div className="d-flex align-items-center justify-content-start">
+        <div className="name">
           <h5>Name: </h5>
-          <p className="mb-1 per-info">Kamlesh</p>
+          <p>ROHIT KUMAWAT</p>
         </div>
-        <div className="d-flex align-items-center justify-content-start">
+        <div className="email">
           <h5>Email: </h5>
-          <p className="mb-1 per-info">burikamlesh@gmail.com</p>
+          <p>rohitkumawat@gmail.com</p>
         </div>
-        <div className="d-flex align-items-center justify-content-center">
+
+        <div className="search-container">
           <div  className="search-box" >
             <input
               className="from-control"
@@ -58,9 +55,6 @@ const Home = () => {
           <div className="row">
             {serachData
               ? serachData?.map((item, i) => {
-                  {
-                    /* console.log("item",item) */
-                  }
                   const { largeImageURL, previewURL } = item;
                   return (
                     <div className="col-3" key={i}>
@@ -84,11 +78,6 @@ const Home = () => {
               : ""}
           </div>
         </div>
-        {/* <Pagnition
-          currentPage={currentPage}
-          setCurrentPage={setCurrentPage}
-          totalLength={total}
-        /> */}
       </div>
     </>
   );

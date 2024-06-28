@@ -1,3 +1,30 @@
+.name {
+  display: flex;
+  justify-content: flex-start;
+  padding: 10px;
+}
+.name h5, p{
+  margin: 5px;
+  font-weight: 500;
+  font-size: 20px;
+}
+
+.email {
+  display: flex;
+  justify-content: flex-start;
+  padding: 10px;
+}
+.email h5, p{
+  margin: 5px;
+  font-weight: 500;
+  font-size: 20px;
+}
+
+.search-container{
+  display: flex;
+  justify-content: center;
+}
+
 .search-box {
   margin-top: 20px;
   width: 400px;
@@ -6,10 +33,16 @@
   justify-content: center;
   border: 1px solid black;
   padding: 5px;
+  
+  border-radius: 30px;
 }
 .search-box input {
   border: none;
-  width:90%
+  border-radius: 25px;
+  /* background: #000; */
+  width:90%;
+  font-weight: 500;
+  padding : 0 10px;
 }
 .search-box input:focus{
   outline: none;
@@ -24,19 +57,25 @@
   width: 10%;
 }
 .search-iteam{
-  padding: 40px 0px;
+  margin: 40px;
+  padding: 20px;
+  /* background: #000; */
+  border-radius: 50px;
 }
+
 .card-iteam{
   border:1px solid black;
   height: auto;
-  border-radius: 5px;
+  border-radius: 20px;
   padding: 10px;
   width: 100%;
   margin: 10px 0px;
+  /* background: #000; */
 }
 .card-iteam img{
   width: 100%;
   height: 250px;
+  border-radius: 15px;
 }
 .cart-buuton{
   margin: 10px 0px;
@@ -44,7 +83,27 @@
   justify-content: center;
   display: flex;
   width: 100%;
+  font-weight: 500;
 }
+
+.btn-dwnld{
+  padding: 5px 10px;
+  font-weight: 500;
+  border-radius: 20px;
+  margin: 10px 0;
+}
+
+.icons{
+  display: flex;
+  margin: 25px 5px;
+}
+
+.iconContainer{
+  width: 25vw;
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 0;
+} 
 
 .icon-image {
   width: 70px;
@@ -53,6 +112,9 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  border-radius: 20px;
+  padding: 20px;
+  /* background: #000; */
 }
 .icon-image img{
   width: 50px;
@@ -63,7 +125,6 @@
   height: 600px;
   width: 100%;
   padding: 10px;
-  border: 1px solid #dcdcdc;
 }
 .per-info{
   font-size: 20px;

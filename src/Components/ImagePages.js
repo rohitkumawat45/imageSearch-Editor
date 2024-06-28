@@ -1,7 +1,7 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom';
 
-const Pagnition = ({currentPage,setCurrentPage,totalLength}) => {
+const ImagePages = ({currentPage,setCurrentPage,totalLength}) => {
     const recordsPerPage =20;
     const lastIndex = currentPage * recordsPerPage;
     const firstIndex = lastIndex - recordsPerPage;
@@ -65,4 +65,4 @@ const Pagnition = ({currentPage,setCurrentPage,totalLength}) => {
   )
 }
 
-export default Pagnition
+export default ImagePages

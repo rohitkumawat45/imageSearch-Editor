@@ -1,8 +1,11 @@
 import React, { useRef, useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
 import { fabric } from "fabric";
+import rectangle from '../assests/rectangle.png'
+import triangle from '../assests/triangle.jpg'
+import circle from '../assests/cercle.png'
 
-const Nextpage = () => {
+const ForwardPage = () => {
   const location = useLocation();
   const userImage = location?.state?.imageurl;
   console.log("userImage", userImage);
@@ -97,32 +100,35 @@ const Nextpage = () => {
 
   return (
     <div className="container">
-      <div className="row mt-5">
+      <div className="icons">
         <div className="col-8">
           <div className="canvas-section">
             <canvas ref={fabricCanvasRef} width="835" height="580" />
           </div>
-          <button onClick={handleExport}>Download</button>
+          
         </div>
-        <div className="col-4">
-          <div className="innter-shap d-flex justify-content-between">
+        <div >
+          
+          <div className="iconContainer">
             <div className="icon-image" onClick={handleAddTriangle}>
-              <img src="/triangle.png" alt="" />
+              <img src={triangle} alt="Triangle" />
             </div>
             <div className="icon-image" onClick={handleAddRectangle}>
-              <img src="/rectangle.png" alt="" />
+              <img src={rectangle} alt="Rectangle" />
             </div>
             <div className="icon-image" onClick={handleAddText}>
               Add Text
             </div>
             <div className="icon-image" onClick={handleAddCircle}>
-              <img src="/circle.png" alt="" />
+              <img src={circle} alt="circle" />
             </div>
+            
           </div>
+          <button className="btn-dwnld" onClick={handleExport}>Download</button>
         </div>
       </div>
     </div>
   );
 };
 
-export default Nextpage;
+export default ForwardPage;

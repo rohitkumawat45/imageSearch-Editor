@@ -1,8 +1,8 @@
 import * as React from "react";
-import { createRoot } from "react-dom/client";
+
 import { HashRouter, Route, Routes } from "react-router-dom";
 import Home from "../Components/Home";
-import Nextpage from "../Components/Nextpage";
+import Nextpage from "../Components/ForwardPage";
 
 function App() {
   return (
